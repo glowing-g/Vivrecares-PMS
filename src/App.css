@@ -1,0 +1,437 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 1rem 2rem;
+  height: 100px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  font-family: 'Century Gothic Paneuropean';
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ff9800;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .menu li {
+  margin: 0 0.5rem;
+}
+
+.navbar .menu li a {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.navbar .menu li a:hover {
+  background-color: #444;
+}
+
+.logo {
+  height: 260px;
+  filter: invert(1);
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.user-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.user-icon:hover {
+  filter: brightness(0.8);
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.home-image img {
+  width: 1000px;
+  height: 790px;
+  margin-bottom: -84px;
+}
+
+.home-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home-text {
+  scale: 0.7;
+  max-width: 500px; 
+  text-align: left; 
+  margin-right: 10rem;
+}
+
+.home-text h1 {
+  font-size: 2rem;
+}
+
+.home-text p {
+  font-size: 2rem;
+  margin-top: -150px;
+  margin-bottom: 1.5rem;
+}
+
+.home .home-vivre img{
+  width: 550px;
+  height: auto;
+  padding-right: 100px;
+  margin-left: -100px;
+}
+
+.footer {
+  align-items: center; /* Vertically center the content */
+  justify-content: space-between; /* Space out the logo and links */
+  background-color: #4E3D44;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem; /* Reduce vertical padding */
+  height: auto; /* Allow dynamic height */
+  overflow: hidden; /* Prevent content overflow */
+  margin-top: 77px; /* Adjust space above the footer */
+}
+
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* Add spacing between links */
+  flex-wrap: wrap; /* Allow links to wrap if needed */
+  margin: 0; /* Remove unnecessary margins */
+  padding: 0; /* Remove unnecessary padding */
+}
+
+.services {
+  background-color: #e7cac1;   /* Your desired background color */
+  border-radius: 24px;         /* Makes the corners rounded */
+  padding: 0;               /* Adds space inside the box */
+  max-width: 1800px;            /* Optional: limits the width */
+  margin: 2rem auto;           /* Centers the box horizontally and adds space above/below */
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08); /* Optional: subtle shadow for effect */
+}
+
+.services-image1 {
+  margin-top: 100px;
+  height: 600px;
+  width: auto;
+  border-radius: 20px;
+  margin-left: 300px;
+}
+
+.services1 {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.textService {
+  margin: 3rem;
+  font-family: 'Daretro Mandra';
+  color: white;
+  font-size: 2rem;
+  text-align: left;
+  margin-top: 10rem;
+  margin-bottom: 1rem;
+}
+
+.textServiceInfo {
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-family: 'Century Gothic Paneuropean';
+  color: white;
+  text-align: left;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 0;
+
+
+}
+
+.services-textBox{
+  background-color: #4E3D44; 
+  padding: 0.5rem; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  width:  600px;
+  height: 600px;
+  margin: 1rem auto; 
+  text-align: center; 
+  margin-top: 10rem;
+  margin-right: 17rem;
+  border-radius: 30px;
+}
+
+.services-image2 {
+  margin-top: 100px;
+  height: 600px;
+  width: auto;
+  border-radius: 20px;
+  margin-right: 300px;
+}
+
+.services-textBoxInvert {               /* Same as dun sa brown textBox syempre pero naka invert lang */
+  background-color: #4E3D44; /* Semi-transparent white background */
+  padding: 1rem; /* Add padding inside the box */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  width:  600px;
+  height: 600px;
+  margin: 1rem auto; /* Center the text box and add spacing */
+  text-align: center; /* Center-align the text */
+  margin-top: 200px;
+  margin-left: 17rem;
+  border-radius: 30px;
+}
+
+.services-image3 {
+  margin-top: 100px;
+  height: 600px;
+  width: auto;
+  border-radius: 20px;
+  margin-left: 300px;
+}
+
+.clinic-header {
+  background-color: #4E3D44;
+  font-size: 4rem;
+  color: white;
+  border-radius: 20px;
+  font-family: 'Daretro Mandra';
+  margin: 3rem 2rem;
+  padding: 2rem;
+}
+
+.clinic-branch-card {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #674C57;
+}
+
+.clinic-branch-card-2 {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #8d5d70;
+}
+
+.clinic-branch-info {
+  text-align: left;
+  margin: 4rem;
+  font-size: 4rem;
+  font-family: 'Daretro Mandra';
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.clinic-branch-address {
+  margin-top: 0;
+  text-align: left;
+  font-size: 1rem;
+  font-family: 'Century Gothic Paneuropean';
+  color: white;
+  margin-left: 4rem;
+}
+
+.clinic-text {
+  display: flex;
+  flex-direction: column;    
+}
+
+.clinic-image-2 {
+  width: auto;
+  height: 600px;
+}
+
+/* First service: image left, text right */
+.services1 .services-image1 {
+  animation: slideInLeft 1s ease-out;
+}
+.services1 .services-textBox {
+  animation: slideInRight 1s ease-out;
+}
+
+/* Second service: text left, image right */
+.services1 .services-textBoxInvert {
+  animation: slideInLeft 1s ease-out;
+}
+.services1 .services-image2 {
+  animation: slideInRight 1s ease-out;
+}
+
+/* Third service: image left, text right */
+.services1 .services-image3 {
+  animation: slideInLeft 1s ease-out;
+}
+.services1 .services-textBox {
+  animation: slideInRight 1s ease-out;
+}
+
+/* Add delays for a staggered effect */
+.services1:nth-child(1) .services-image1,
+.services1:nth-child(1) .services-textBox {
+  animation-delay: 0.1s;
+}
+.services1:nth-child(2) .services-textBoxInvert,
+.services1:nth-child(2) .services-image2 {
+  animation-delay: 0.3s;
+}
+.services1:nth-child(3) .services-image3,
+.services1:nth-child(3) .services-textBox {
+  animation-delay: 0.5s;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  position: relative;
+  min-width: 300px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px; right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.login-logo {
+  filter: invert(1);
+  height: 20rem;
+  width: auto;
+  justify-content: center;
+  overflow: visible;
+  margin-bottom: -2rem;
+  margin-top: -4rem;
+}
+
+.formStyle {
+  border-radius: 20px;
+
+}
+
+.login-header{
+  color: #444;
+
+}
+
+.login-box{
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.label-text {
+  margin-top: 20px;
+  font-family: 'Century Gothic Paneuropean';
+  color: black;
+}
+
+.label-text-top {
+  margin-top: -10px;
+  font-family: 'Century Gothic Paneuropean';
+  color: black;
+}
+
+.new-to-vivre {
+  color: #444;
+}
+
+.modal-content .modal-signup-link {
+  text-decoration: none;
+  color: #c5b156;
+  font-weight: 500;
+  font-size: inherit;
+  margin: 0;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-button {
+  background-color: #c5b156;
+  padding: 1rem 6rem;
+  border-radius: 2rem;
+  border: none;
+  font-size:1rem;
+  color: white;
+}
+
+.login-button:hover {
+  background-color: #d3c68f;
+}
