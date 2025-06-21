@@ -171,6 +171,7 @@ html {
   width: auto;
   border-radius: 20px;
   margin-left: 300px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 .services1 {
@@ -221,6 +222,7 @@ html {
   width: auto;
   border-radius: 20px;
   margin-right: 300px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 .services-textBoxInvert {               /* Same as dun sa brown textBox syempre pero naka invert lang */
@@ -242,6 +244,7 @@ html {
   width: auto;
   border-radius: 20px;
   margin-left: 300px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 .clinic-header {
@@ -434,4 +437,179 @@ html {
 
 .login-button:hover {
   background-color: #d3c68f;
+}
+
+.sidebar-container {
+  background-color: #444;
+  flex-direction: column;
+  padding-right: 0rem;
+  margin-bottom: -5rem;
+  color: #fff;
+} 
+
+.sidebar-list {
+  padding-left: 2rem;
+  margin-top: 10rem;
+  list-style: none;
+  font-size: 1rem;
+  padding-right: 0rem;
+  width: 20rem;
+}
+
+.sidebar-link {
+  display: block;
+  margin-bottom: 3rem;
+  text-align: left;
+
+}
+
+.sidebar-text li a {
+  text-align: left;
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  padding-top: 1rem;
+  font-weight: bold;
+}
+
+.sidebar-text li a:hover {
+  color: #c5b156;
+}
+
+.sidebar-text li a:active {
+  color: #d3c68f;
+}
+
+.profile {
+  background-color: #1f1e1e;
+}
+
+
+.user-profile-container {
+  display: flex;
+  flex: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+  background-color: #ffffff;
+  margin: 3rem;
+  margin-left: 10rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture {
+  height: 15rem;
+  margin: 4rem;
+  border-radius: 30px;
+} 
+
+.section-header {
+  margin-left: 4rem;
+  font-weight: bold;
+  color: #c5b156;
+  font-family: 'Century Gothic Paneuropean';
+}
+
+.profile-information h2{
+  font-weight: lighter;
+}
+
+.patient-info {
+  margin-bottom: 32px;
+}
+
+.patient-contact-info p {
+  text-align: center;
+}
+
+.medical-history {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  background-color: #ffffff;
+  margin: 1rem;
+  margin-top: 1rem;
+  padding-right: 25rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.medical-history h1 {
+  margin-top: 20px;
+  margin-left: 35px;
+  color: #c5b156;
+}
+
+.medical-history p {
+  margin-left: 6rem;
+}
+
+.medical-history h2 {
+  margin-left: 4rem;
+  font-weight: bold;
+  font-family: 'Century Gothic Paneuropean';
+}
+
+.flex-row {
+  display: flex;
+}
+
+.consultation-notes-container{
+  display: flex;
+  flex: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 26.3rem;
+  background-color: #ffffff;
+  margin: 1rem;
+  margin-top: 1rem;
+  padding-right: 45rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-left: 10rem;
+}
+
+.consultation-notes-container h1 {
+  color: #c5b156;
+
+}
+
+.appointment-history-card {
+  display: flex;
+  flex: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35rem;
+  background-color: #ffffff;
+  margin: 1rem;
+  margin-top: 1rem;
+  padding-right: 45rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-left: 10rem;
+}
+
+.appointment-request-card{
+  display: flex;
+  flex: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50rem;
+  background-color: #ffffff;
+  margin: 1rem;
+  margin-top: 1rem;
+  padding-right: 45rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-left: 10rem;
+}
+
+.check-button:hover {
+   transform: scale(1.1);
 }

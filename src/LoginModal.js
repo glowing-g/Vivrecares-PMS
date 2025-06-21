@@ -3,6 +3,7 @@ import './App.css';
 import logo from "./logo.png";
 import { Link } from "react-router-dom";
 import axios from 'axios';
+import Register from "./Register";
 
 function LoginModal({ open, children, onClose}) {
     const [ formData, setFormData ] = useState({
@@ -22,38 +23,24 @@ function LoginModal({ open, children, onClose}) {
         }));
     };
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        setError('');
-        setIsLoading(true);
+    const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
+    try {
+      const res = await axios.post('http://localhost:5000/api/auth/login', formData);
+      console.log(res.data);
 
-        try {
-          const response = await fetch('http://localhost:5000/login', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData)
-          });
-
-          const data = await response.json();
-
-          if (!response.ok) {
-            throw new Error(data.message || 'Login failed');
-          }
-
-          // Store the token
-          localStorage.setItem('token', data.token);
-          onClose();
-          // Optional: Redirect or update UI state
-          
-        } catch (error) {
-          setError(error.message);
-          console.error('Login error:', error);
-        } finally {
-          setIsLoading(false);
-        }
-      };
+      // Save token/user info or redirect
+      setUser(res.data.user);
+      alert('Login successful!');
+    } catch (err) {
+      if (err.response && err.response.status === 401) {
+        setError('Invalid username or password');
+      } else {
+        setError('Server error. Please try again later.');
+      }
+    }
+  };
 
     return (
         <div>
@@ -64,16 +51,16 @@ function LoginModal({ open, children, onClose}) {
                     <h2 className="login-header">Login</h2>
                     {error && <div className="error-message">{error}</div>}
                     <div className="login-box">
-                        <label for="username" className="label-text-top">Email </label>     
+                        <label htmlFor="username" className="label-text-top">Email </label>     
                         <input type="text" name="username" id="username" value={formData.username} onChange={handleChange} className="input-field" required placeholder="Email"></input>
                     </div>
                     <div className="login-box">
-                        <label for="password" className="label-text">Password</label>
+                        <label htmlFor="password" className="label-text">Password</label>
                         <input type="password" name="password" id="password" value={formData.password} onChange={handleChange} className="input-field" required placeholder="Password"></input>       
                     </div> 
                     <div className="remember-forgot">
                     <input type="checkbox" id="remember"></input>
-                    <label for="remember" className="label-text">Remember me?</label>
+                    <label htmlFor="remember" className="label-text">Remember me?</label>
                     <div className="modal-footer">
                         <p className="new-to-vivre">New to VIVRE? <Link to="/register" className="modal-signup-link">Sign up</Link> here.</p>
                     </div>
@@ -86,15 +73,7 @@ function LoginModal({ open, children, onClose}) {
                 </form>
             </div>
         </div>
-
-
-
-
-    )
-
-
-
-
+    );
 }
 
 export default LoginModal;

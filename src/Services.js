@@ -5,8 +5,7 @@ import services1 from "./services1.jpg";
 import services2 from "./services2.png";
 import services3 from "./services3.png";
 import services4 from "./services4.JPG";
-import branch1 from "./branch1.png";
-import branch2 from "./branch2.png";
+
 
 function Services() {
     return (
@@ -41,7 +40,7 @@ function Services() {
                     <img src={services4} alt="Services" className="services-image2" />
                 </div>
             </div>
-            <div id="clinics"className="clinics">
+            {/* <div id="clinics" className="clinics">
                 <div className="clinic-text">
                     <h1 className="clinic-header">Clinic Branches</h1>
                 </div>
@@ -59,7 +58,7 @@ function Services() {
                         </div>
                         <img src={branch2} alt="Clinic Branch2" className="clinic-image-2" />
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }
